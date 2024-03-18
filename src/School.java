@@ -2,7 +2,8 @@ import java.util.ArrayList;
 
 public class School {
 
-    static ArrayList<Student> studentsOfSchool = new ArrayList<>();
+    private static ArrayList<Student> studentsOfSchool = new ArrayList<>();
+
 
     public static void addStudent(Student student) {
         studentsOfSchool.add(student);
@@ -13,15 +14,24 @@ public class School {
     }
 
     public static ArrayList<Course> getCourses(int id) {
-        return studentsOfSchool.get(id).getCourses();
+        Student student = findStudent(id);
+        if (student == null) {
+            return null;
+        }
+        return student.getCourses();
     }
 
     public static Student findStudent(int id) {
-        return studentsOfSchool.get(id);
+        for (Student student:studentsOfSchool) {
+            if (student.getStudentID() == id) {
+                return student;
+            }
+        }
+        return null;
     }
 
     public static void deleteStudent(int id) {
-        studentsOfSchool.remove(id);
+        studentsOfSchool.remove(findStudent(id));
     }
 
 }

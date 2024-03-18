@@ -15,13 +15,15 @@ public class Main {
         //students.add(student1);
         //students.add(student2);
 
-        School.addStudent(student1);
-        School.addStudent(student2);
-        School.addStudent(student3);
+        //School.addStudent(student1);
+        //School.addStudent(student2);
+        //School.addStudent(student3);
 
         School.printStudents();
+
         System.out.println(School.findStudent(1));
         School.deleteStudent(1);
+
         School.printStudents();
 
         student1.addCourses(course1);

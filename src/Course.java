@@ -14,6 +14,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return name + " " + instructor + " " + room;
+        return name + "-" + instructor + "-" + room;
     }
 }

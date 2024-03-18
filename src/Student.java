@@ -14,6 +14,7 @@ public class Student {
         this.lastName = lastName;
         studentID = totalStudents;
         totalStudents += 1;
+        School.addStudent(this);
     }
 
     public Student() {};
@@ -26,9 +27,13 @@ public class Student {
         return courses;
     }
 
+    public int getStudentID() {
+        return studentID;
+    }
+
     @Override
     public String toString() {
-        return firstName + " " + lastName + " " + studentID;
+        return firstName + "-" + lastName + "-" + studentID;
     }
 
 }
