@@ -31,6 +31,14 @@ public class Student {
         return studentID;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
     @Override
     public String toString() {
         return firstName + "-" + lastName + "-" + studentID;

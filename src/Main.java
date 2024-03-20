@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Main {
     public static void main(String[] args) {
@@ -19,7 +20,7 @@ public class Main {
         //School.addStudent(student2);
         //School.addStudent(student3);
 
-        School.printStudents();
+        /*School.printStudents();
 
         System.out.println(School.findStudent(1));
         School.deleteStudent(1);
@@ -30,7 +31,18 @@ public class Main {
         student1.addCourses(course2);
 
         System.out.println(School.getCourses(0));
-        System.out.println(School.getCourses(1));
+        System.out.println(School.getCourses(1)); */
+
+        HashMap<Integer,Student> newMap = School.listToHashmap();
+
+        System.out.println(newMap);
+
+        System.out.println(newMap.get(2));
+        System.out.println(newMap.size());
+        newMap.remove(0);
+        System.out.println(newMap.containsKey(5));
+
+        System.out.println(newMap);
 
     }
 }

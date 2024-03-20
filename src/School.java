@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class School {
 
@@ -32,6 +34,16 @@ public class School {
 
     public static void deleteStudent(int id) {
         studentsOfSchool.remove(findStudent(id));
+    }
+
+    public static HashMap<Integer,Student> listToHashmap() {
+
+        HashMap<Integer,Student> studentsMap = new HashMap<>();
+
+        for (Student student : studentsOfSchool) {
+            studentsMap.put(student.getStudentID(), student);
+        }
+        return studentsMap;
     }
 
 }
